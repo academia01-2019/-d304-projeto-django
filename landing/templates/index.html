@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <a href="sobre/">Sobre</a>
+    <h1>Paguem seus boletos {{item}}</h1>
+    {% for i in lista %}
+    <p>{{i}}</p>
+    {% endfor %}
+
+    {% if item == 'Groger' %}
+    <p>Irá aparecer esse if aqui, se o nome for igual a groger</p>
+    {% else %}
+    <p>Caso contrário {{item}}</p>
+    {% endif %}
+    <img src="{% static 'images/1.jpg' %}" alt="">
+{% endblock %}
